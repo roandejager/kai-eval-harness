@@ -33,18 +33,7 @@ py scorer.py --eval-set eval_set.json --responses mock_responses.json --export r
 
 ## Sample Terminal Output
 
-=====================================================================================
-  KAI RETRIEVAL AND SUBJECT-RESOLUTION EVAL SET : BENCHMARK REPORT
-=====================================================================================
-Category               | Tested | Intent %   | Subj %     | Ex Violations  | Fact Bounds %
--------------------------------------------------------------------------------------
-guarded                | 1      |     100.0% |     100.0% |              0 |        100.0%
-specific               | 1      |     100.0% |     100.0% |              0 |          0.0%
-subject-resolution     | 2      |     100.0% |      50.0% |              1 |        100.0%
-vague                  | 1      |     100.0% |     100.0% |              0 |          0.0%
--------------------------------------------------------------------------------------
-OVERALL                | 5      |     100.0% |      80.0% |              1 |         60.0%
-=====================================================================================
+![Terminal Output](terminal_preview.png)
 
 ## License
 

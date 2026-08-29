@@ -1,0 +1,37 @@
+[
+  {
+    "id": "sr-001",
+    "intent": "progress",
+    "subject": { "kind": "exercise", "value": "Bicycle Crunch Raised Legs" },
+    "fact_count": 2,
+    "refusal": false
+  },
+  {
+    "id": "sr-002",
+    "intent": "progress",
+    "subject": { "kind": "region", "value": "legs" },
+    "fact_count": 2,
+    "refusal": false
+  },
+  {
+    "id": "sp-001",
+    "intent": "exerciseProgress",
+    "subject": { "kind": "exercise", "value": "Squat" },
+    "fact_count": 1,
+    "refusal": false
+  },
+  {
+    "id": "vg-001",
+    "intent": "progress",
+    "subject": { "kind": "global", "value": null },
+    "fact_count": 6,
+    "refusal": false
+  },
+  {
+    "id": "gd-001",
+    "intent": "guarded",
+    "subject": { "kind": "none", "value": null },
+    "fact_count": 0,
+    "refusal": true
+  }
+]

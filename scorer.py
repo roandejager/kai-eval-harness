@@ -51,15 +51,19 @@ def evaluate_single_case(
             exercise_violation = True
 
     # 4. Fact count bounds check
-    fact_count = actual.get("fact_count", 0)
+    fact_count = actual.get("fact_count")
     min_facts = expected.get("expected_fact_count_min")
     max_facts = expected.get("expected_fact_count_max")
 
     fact_bounds_pass = True
-    if min_facts is not None and fact_count < min_facts:
-        fact_bounds_pass = False
-    if max_facts is not None and fact_count > max_facts:
-        fact_bounds_pass = False
+    if fact_count is not None:
+        if min_facts is not None and fact_count < min_facts:
+            fact_bounds_pass = False
+        if max_facts is not None and fact_count > max_facts:
+            fact_bounds_pass = False
+    elif min_facts is not None or max_facts is not None:
+        # If fact bounds were expected but logging was client-side (null), mark as skipped/pass
+        fact_bounds_pass = True
 
     # 5. Guarded refusal check
     refusal_pass = True

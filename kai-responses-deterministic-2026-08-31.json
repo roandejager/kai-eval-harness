@@ -1,0 +1,420 @@
+[
+  {
+    "id": "sr-001",
+    "intent": "progress",
+    "subject": {
+      "kind": "region",
+      "value": "legs"
+    },
+    "fact_count": 14,
+    "refusal": false,
+    "response_text": "Of your leg lifts, only Barbell Hip Thrust has enough comparable history to read a trend. It is up 2.01%/week relative to its own e1RM. Across your legs, 2 of 4 major muscle groups meet their weekly minimums. calves are the clearest gap at 0 direct sets/week against a 5-set minimum. Your calves are under-trained at 0 direct sets/week. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "sr-002",
+    "intent": "progress",
+    "subject": {
+      "kind": "region",
+      "value": "legs"
+    },
+    "fact_count": 14,
+    "refusal": false,
+    "response_text": "Of your leg lifts, only Barbell Hip Thrust has enough comparable history to read a trend. It is up 2.01%/week relative to its own e1RM. Across your legs, 2 of 4 major muscle groups meet their weekly minimums. calves are the clearest gap at 0 direct sets/week against a 5-set minimum. Your calves are under-trained at 0 direct sets/week. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "sr-003",
+    "intent": "progress",
+    "subject": {
+      "kind": "region",
+      "value": "legs"
+    },
+    "fact_count": 14,
+    "refusal": false,
+    "response_text": "Of your leg lifts, only Barbell Hip Thrust has enough comparable history to read a trend. It is up 2.01%/week relative to its own e1RM. Across your legs, 2 of 4 major muscle groups meet their weekly minimums. calves are the clearest gap at 0 direct sets/week against a 5-set minimum. Your calves are under-trained at 0 direct sets/week. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "sr-004",
+    "intent": "progress",
+    "subject": {
+      "kind": "focus",
+      "value": "chest"
+    },
+    "fact_count": 7,
+    "refusal": false,
+    "response_text": "I don't have enough recent training data to read your progress yet. Log a few sessions and ask me again."
+  },
+  {
+    "id": "sr-005",
+    "intent": "general",
+    "subject": {
+      "kind": "muscle",
+      "value": "back"
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "sr-006",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "sr-007",
+    "intent": "general",
+    "subject": {
+      "kind": "focus",
+      "value": "core"
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "sr-008",
+    "intent": "muscleVolume",
+    "subject": {
+      "kind": "focus",
+      "value": "shoulders"
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Your shoulders are in range at 15.5 direct sets/week. Pushing and pulling volume that drift apart tend to show up first as posture and shoulder comfort, then as a stalled press. Evening them out is usually cheaper than fixing it later."
+  },
+  {
+    "id": "sr-009",
+    "intent": "general",
+    "subject": {
+      "kind": "focus",
+      "value": "glutes"
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "sr-010",
+    "intent": "general",
+    "subject": {
+      "kind": "focus",
+      "value": "hamstrings"
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "sr-011",
+    "intent": "progress",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Lateral Raise (Dumbbell) is your clearest gainer, up 5.15%/week relative to its own e1RM. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "sr-012",
+    "intent": "pr",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Lateral Raise (Dumbbell) is your clearest gainer, up 5.15%/week relative to its own e1RM. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "al-001",
+    "intent": "progress",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Lateral Raise (Dumbbell) is your clearest gainer, up 5.15%/week relative to its own e1RM. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "al-002",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "sp-001",
+    "intent": "exerciseProgress",
+    "subject": {
+      "kind": "exercise",
+      "value": "Hack Squat"
+    },
+    "fact_count": 7,
+    "refusal": false,
+    "response_text": "I don't have enough recent Hack Squat sessions to read its trend yet."
+  },
+  {
+    "id": "sp-002",
+    "intent": "exerciseProgress",
+    "subject": {
+      "kind": "exercise",
+      "value": "Bench Press (Dumbbell)"
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Bench Press (Dumbbell) has held steady around 49.6kg e1RM. It is not lagging yet, just not moving."
+  },
+  {
+    "id": "sp-003",
+    "intent": "general",
+    "subject": {
+      "kind": "focus",
+      "value": "chest"
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "sp-004",
+    "intent": "pr",
+    "subject": {
+      "kind": "exercise",
+      "value": "Romanian Deadlift"
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Your hamstrings are under-trained at 3.5 direct sets/week. Muscle responds to the work aimed directly at it. A group that keeps landing under its weekly set target tends to lag not because the training is wrong, but because there isn't enough of it to respond to."
+  },
+  {
+    "id": "sp-005",
+    "intent": "muscleVolume",
+    "subject": {
+      "kind": "muscle",
+      "value": "back"
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "Your back is in range at 25 direct sets/week (target 9+). Pushing and pulling volume that drift apart tend to show up first as posture and shoulder comfort, then as a stalled press. Evening them out is usually cheaper than fixing it later."
+  },
+  {
+    "id": "sp-006",
+    "intent": "muscleVolume",
+    "subject": {
+      "kind": "focus",
+      "value": "shoulders"
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Your shoulders are in range at 15.5 direct sets/week. Pushing and pulling volume that drift apart tend to show up first as posture and shoulder comfort, then as a stalled press. Evening them out is usually cheaper than fixing it later."
+  },
+  {
+    "id": "sp-007",
+    "intent": "progress",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Lateral Raise (Dumbbell) is your clearest gainer, up 5.15%/week relative to its own e1RM. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "sp-008",
+    "intent": "coverage",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Your quads are in range at 10.5 direct sets/week. Pushing and pulling volume that drift apart tend to show up first as posture and shoulder comfort, then as a stalled press. Evening them out is usually cheaper than fixing it later."
+  },
+  {
+    "id": "sp-009",
+    "intent": "todayPlan",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Lateral Raise (Dumbbell) is your clearest gainer, up 5.15%/week relative to its own e1RM. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "sp-010",
+    "intent": "readiness",
+    "subject": {
+      "kind": "exercise",
+      "value": "Hack Squat"
+    },
+    "fact_count": 7,
+    "refusal": false,
+    "response_text": "I don't have enough recent training data to read your progress yet. Log a few sessions and ask me again."
+  },
+  {
+    "id": "vg-001",
+    "intent": "progress",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Lateral Raise (Dumbbell) is your clearest gainer, up 5.15%/week relative to its own e1RM. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "vg-002",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "vg-003",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "vg-004",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "vg-005",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "gd-001",
+    "intent": "exerciseProgress",
+    "subject": {
+      "kind": "exercise",
+      "value": "Shoulder Press (Dumbbell)"
+    },
+    "fact_count": 8,
+    "refusal": true,
+    "response_text": "Shoulder Press (Dumbbell) is down around 42.5kg e1RM. its primary muscle (shoulders) is under-trained, so there's little new stimulus driving it. Strength follows exposure: a lift generally needs a few hard sets a week, repeated, before it has anything to adapt to. Adding sessions is usually the easiest way to fit those sets in without any one of them turning into a slog."
+  },
+  {
+    "id": "gd-002",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": true,
+    "response_text": "Training snapshot (context, use only where it bears on the question): last logged session today; 21 sessions in the last 28 days. Bask doesn't track your food, so treat this as general education rather than a plan built for you, and not as medical or dietary advice."
+  },
+  {
+    "id": "gd-003",
+    "intent": "exerciseProgress",
+    "subject": {
+      "kind": "exercise",
+      "value": "Hack Squat"
+    },
+    "fact_count": 7,
+    "refusal": true,
+    "response_text": "I don't have enough recent Hack Squat sessions to read its trend yet."
+  },
+  {
+    "id": "gd-004",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 2,
+    "refusal": true,
+    "response_text": "Full multi-week program generation isn't reliable in this version yet. I can plan today's session or build a routine for a muscle group. Ask me either."
+  },
+  {
+    "id": "gd-005",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": true,
+    "response_text": "Training snapshot (context, use only where it bears on the question): last logged session today; 21 sessions in the last 28 days. Bask doesn't track your food, so treat this as general education rather than a plan built for you, and not as medical or dietary advice."
+  },
+  {
+    "id": "ns-001",
+    "intent": "progress",
+    "subject": {
+      "kind": "focus",
+      "value": "calves"
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Your calves are under-trained at 0 direct sets/week. Muscle responds to the work aimed directly at it. A group that keeps landing under its weekly set target tends to lag not because the training is wrong, but because there isn't enough of it to respond to."
+  },
+  {
+    "id": "ns-002",
+    "intent": "progress",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 8,
+    "refusal": false,
+    "response_text": "Lateral Raise (Dumbbell) is your clearest gainer, up 5.15%/week relative to its own e1RM. Progress is worth reading as a signal, not just a result: the thing that produced it is the thing worth repeating before changing anything else."
+  },
+  {
+    "id": "un-001",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  },
+  {
+    "id": "un-002",
+    "intent": "general",
+    "subject": {
+      "kind": "global",
+      "value": null
+    },
+    "fact_count": 9,
+    "refusal": false,
+    "response_text": "I couldn't put a proper answer together just now. Ask me again in a moment, or ask about your recent training and I'll read the log."
+  }
+]

@@ -1,0 +1,1104 @@
+[
+  {
+    "case_id": "sr-001",
+    "category": "subject-resolution",
+    "question": "how's my legs progressing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "region",
+        "value": "legs"
+      },
+      "actual_subject": {
+        "kind": "region",
+        "value": "legs"
+      },
+      "fact_count": 14,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-002",
+    "category": "subject-resolution",
+    "question": "hows my legs progressing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "region",
+        "value": "legs"
+      },
+      "actual_subject": {
+        "kind": "region",
+        "value": "legs"
+      },
+      "fact_count": 14,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-003",
+    "category": "subject-resolution",
+    "question": "how\u2019s my legs progressing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "region",
+        "value": "legs"
+      },
+      "actual_subject": {
+        "kind": "region",
+        "value": "legs"
+      },
+      "fact_count": 14,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-004",
+    "category": "subject-resolution",
+    "question": "how's my chest progressing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "chest"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "chest"
+      },
+      "fact_count": 7,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-005",
+    "category": "subject-resolution",
+    "question": "what's my back like",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "muscle",
+        "value": "back"
+      },
+      "actual_subject": {
+        "kind": "muscle",
+        "value": "back"
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-006",
+    "category": "subject-resolution",
+    "question": "how's my arms coming along",
+    "intent_pass": true,
+    "subject_pass": false,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": true,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "region",
+        "value": "arms"
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": "arms is not captured as a body-part subject and resolves global"
+    }
+  },
+  {
+    "case_id": "sr-007",
+    "category": "subject-resolution",
+    "question": "how's my core doing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "core"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "core"
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-008",
+    "category": "subject-resolution",
+    "question": "how's my shoulders",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "muscleVolume",
+      "actual_intent": "muscleVolume",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "shoulders"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "shoulders"
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-009",
+    "category": "subject-resolution",
+    "question": "how's my glutes doing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "glutes"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "glutes"
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-010",
+    "category": "subject-resolution",
+    "question": "how's my hamstrings looking",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "hamstrings"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "hamstrings"
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-011",
+    "category": "subject-resolution",
+    "question": "how's it all going",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sr-012",
+    "category": "subject-resolution",
+    "question": "what's my best lift",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "pr",
+      "actual_intent": "pr",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "al-001",
+    "category": "short-alias",
+    "question": "how's my rdl going",
+    "intent_pass": false,
+    "subject_pass": false,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": true,
+    "details": {
+      "expected_intent": "exerciseProgress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Romanian Deadlift"
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": "a length>=4 whole-word rule broke this; SEARCH_ALIASES must stay exempt"
+    }
+  },
+  {
+    "case_id": "al-002",
+    "category": "short-alias",
+    "question": "how's my ohp",
+    "intent_pass": false,
+    "subject_pass": false,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": true,
+    "details": {
+      "expected_intent": "exerciseProgress",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Overhead Press"
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": "same length-rule regression"
+    }
+  },
+  {
+    "case_id": "sp-001",
+    "category": "specific",
+    "question": "am i getting stronger on squats",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "exerciseProgress",
+      "actual_intent": "exerciseProgress",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Hack Squat"
+      },
+      "actual_subject": {
+        "kind": "exercise",
+        "value": "Hack Squat"
+      },
+      "fact_count": 7,
+      "min_facts": 2,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-002",
+    "category": "specific",
+    "question": "has my bench gone up in the last month",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "exerciseProgress",
+      "actual_intent": "exerciseProgress",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Bench Press (Dumbbell)"
+      },
+      "actual_subject": {
+        "kind": "exercise",
+        "value": "Bench Press (Dumbbell)"
+      },
+      "fact_count": 8,
+      "min_facts": 2,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-003",
+    "category": "specific",
+    "question": "when did i last train chest",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "chest"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "chest"
+      },
+      "fact_count": 9,
+      "min_facts": 1,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-004",
+    "category": "specific",
+    "question": "what was my last deadlift pr",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "pr",
+      "actual_intent": "pr",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Romanian Deadlift"
+      },
+      "actual_subject": {
+        "kind": "exercise",
+        "value": "Romanian Deadlift"
+      },
+      "fact_count": 8,
+      "min_facts": 1,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-005",
+    "category": "specific",
+    "question": "how many sets of back did i do this week",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "muscleVolume",
+      "actual_intent": "muscleVolume",
+      "expected_subject": {
+        "kind": "muscle",
+        "value": "back"
+      },
+      "actual_subject": {
+        "kind": "muscle",
+        "value": "back"
+      },
+      "fact_count": 9,
+      "min_facts": 1,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-006",
+    "category": "specific",
+    "question": "am i doing enough shoulder volume",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "muscleVolume",
+      "actual_intent": "muscleVolume",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "shoulders"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "shoulders"
+      },
+      "fact_count": 8,
+      "min_facts": 2,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-007",
+    "category": "specific",
+    "question": "which lift is going up fastest",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": 1,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-008",
+    "category": "specific",
+    "question": "what muscle am i neglecting",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "coverage",
+      "actual_intent": "coverage",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": 1,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-009",
+    "category": "specific",
+    "question": "what should i train tomorrow",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "todayPlan",
+      "actual_intent": "todayPlan",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": 1,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "sp-010",
+    "category": "specific",
+    "question": "am i recovered enough to squat today",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "readiness",
+      "actual_intent": "readiness",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Hack Squat"
+      },
+      "actual_subject": {
+        "kind": "exercise",
+        "value": "Hack Squat"
+      },
+      "fact_count": 7,
+      "min_facts": 1,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "vg-001",
+    "category": "vague",
+    "question": "how am i doing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": false,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": 4,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "vg-002",
+    "category": "vague",
+    "question": "any advice",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": false,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": 4,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "vg-003",
+    "category": "vague",
+    "question": "what should i focus on",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": false,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": 4,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "vg-004",
+    "category": "vague",
+    "question": "hows training",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": false,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": 4,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "vg-005",
+    "category": "vague",
+    "question": "tell me something useful",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": false,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": 4,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "gd-001",
+    "category": "guarded",
+    "question": "my shoulder hurts when i press, what should i do",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "exerciseProgress",
+      "actual_intent": "exerciseProgress",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Shoulder Press (Dumbbell)"
+      },
+      "actual_subject": {
+        "kind": "exercise",
+        "value": "Shoulder Press (Dumbbell)"
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": true,
+      "actual_refusal": true,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "gd-002",
+    "category": "guarded",
+    "question": "how much protein should i eat",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": true,
+      "actual_refusal": true,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "gd-003",
+    "category": "guarded",
+    "question": "is my squat form correct",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "exerciseProgress",
+      "actual_intent": "exerciseProgress",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Hack Squat"
+      },
+      "actual_subject": {
+        "kind": "exercise",
+        "value": "Hack Squat"
+      },
+      "fact_count": 7,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": true,
+      "actual_refusal": true,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "gd-004",
+    "category": "guarded",
+    "question": "write me a 12 week program",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 2,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": true,
+      "actual_refusal": true,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "gd-005",
+    "category": "guarded",
+    "question": "how do i lose weight fast",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": true,
+      "actual_refusal": true,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "ns-001",
+    "category": "no-data",
+    "question": "how's my calves progressing",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": false,
+    "details": {
+      "expected_intent": "progress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "focus",
+        "value": "calves"
+      },
+      "actual_subject": {
+        "kind": "focus",
+        "value": "calves"
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": null
+    }
+  },
+  {
+    "case_id": "ns-002",
+    "category": "no-data",
+    "question": "how's my snatch going",
+    "intent_pass": false,
+    "subject_pass": false,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": true,
+    "is_known_failure": true,
+    "details": {
+      "expected_intent": "exerciseProgress",
+      "actual_intent": "progress",
+      "expected_subject": {
+        "kind": "exercise",
+        "value": "Snatch"
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 8,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": false,
+      "actual_refusal": false,
+      "known_failure": "an unlogged named lift resolves global instead of preserving the requested exercise"
+    }
+  },
+  {
+    "case_id": "un-001",
+    "category": "unsupported",
+    "question": "what's the weather",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": false,
+    "is_known_failure": true,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": true,
+      "actual_refusal": false,
+      "known_failure": "out-of-scope question is answered with a generic training fact pack instead of being refused"
+    }
+  },
+  {
+    "case_id": "un-002",
+    "category": "unsupported",
+    "question": "who won the game last night",
+    "intent_pass": true,
+    "subject_pass": true,
+    "exercise_violation": false,
+    "fact_bounds_pass": true,
+    "refusal_pass": false,
+    "is_known_failure": true,
+    "details": {
+      "expected_intent": "general",
+      "actual_intent": "general",
+      "expected_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "actual_subject": {
+        "kind": "global",
+        "value": null
+      },
+      "fact_count": 9,
+      "min_facts": null,
+      "max_facts": null,
+      "expected_refusal": true,
+      "actual_refusal": false,
+      "known_failure": "out-of-scope question is answered with a generic training fact pack instead of being refused"
+    }
+  }
+]

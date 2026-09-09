@@ -19,6 +19,13 @@ This harness provides a reproducible evaluation pipeline that scores model respo
 * Exercise Constraint Violations: Explicit flag tracking cases that must never resolve to a single exercise.
 * Fact Bounds Pass Rate (%): Verifies retrieved workout log facts fall within expected min and max bounds.
 
+## Production Validation & Impact
+
+This harness was commissioned and built from spec for **Kai**, the AI strength-training coach in the [Bask](https://baskai.app/) app, to diagnose failure modes prior to production deployment.
+
+> *"Roan built the scoring harness for Kai, the AI coach in our strength-training app Bask. He wrote it in Python and released it under MIT, choosing the permissive licence himself so we could use it commercially, which I had not asked for. He worked entirely from a written spec with no repository access, no credentials and no production data, and what he delivered integrated with our side first time. Turnaround was about a week from the first conversation to us running our evaluation set through it, and it surfaced real defects in our AI responses that we had not found by hand. He asked good questions, scoped his own work sensibly, and was straightforward to work with. I would work with him again and I am happy to talk to anyone considering hiring him."*  
+> — **Oliver Gilder**, Co-founder, Bask
+
 ## Quick Start
 
 1. Clone the repository:

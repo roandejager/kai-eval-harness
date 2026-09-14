@@ -4,6 +4,7 @@ Provides modular validators for session comparison, trend vs noise, and recommen
 """
 
 from .base import CaseEvaluation, CheckResult, EvalConfig
+from .recommendation import evaluate_recommendation
 from .session_comp import evaluate_session_comparison
 from .trend_noise import evaluate_trend_vs_noise
 
@@ -13,4 +14,5 @@ __all__ = [
     "EvalConfig",
     "evaluate_session_comparison",
     "evaluate_trend_vs_noise",
+    "evaluate_recommendation",
 ]

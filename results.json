@@ -9,6 +9,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -38,6 +39,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -67,6 +69,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -96,6 +99,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -125,6 +129,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -154,6 +159,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": true,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -183,6 +189,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -212,6 +219,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "muscleVolume",
       "actual_intent": "muscleVolume",
@@ -241,6 +249,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -270,6 +279,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -299,6 +309,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -328,6 +339,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "pr",
       "actual_intent": "pr",
@@ -357,6 +369,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": true,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "progress",
@@ -386,6 +399,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": true,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "general",
@@ -415,6 +429,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "exerciseProgress",
@@ -444,6 +459,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "exerciseProgress",
@@ -473,6 +489,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -502,6 +519,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "pr",
       "actual_intent": "pr",
@@ -531,6 +549,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "muscleVolume",
       "actual_intent": "muscleVolume",
@@ -560,6 +579,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "muscleVolume",
       "actual_intent": "muscleVolume",
@@ -589,6 +609,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -618,6 +639,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "coverage",
       "actual_intent": "coverage",
@@ -647,6 +669,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "todayPlan",
       "actual_intent": "todayPlan",
@@ -676,6 +699,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "readiness",
       "actual_intent": "readiness",
@@ -705,6 +729,7 @@
     "fact_bounds_pass": false,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -734,6 +759,7 @@
     "fact_bounds_pass": false,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -763,6 +789,7 @@
     "fact_bounds_pass": false,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -792,6 +819,7 @@
     "fact_bounds_pass": false,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -821,6 +849,7 @@
     "fact_bounds_pass": false,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -850,6 +879,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "exerciseProgress",
@@ -879,6 +909,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -908,6 +939,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "exerciseProgress",
@@ -937,6 +969,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -966,6 +999,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -995,6 +1029,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": false,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "progress",
       "actual_intent": "progress",
@@ -1024,6 +1059,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": true,
     "is_known_failure": true,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "progress",
@@ -1053,6 +1089,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": false,
     "is_known_failure": true,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",
@@ -1082,6 +1119,7 @@
     "fact_bounds_pass": true,
     "refusal_pass": false,
     "is_known_failure": true,
+    "detailed_checks": [],
     "details": {
       "expected_intent": "general",
       "actual_intent": "general",

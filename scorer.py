@@ -4,9 +4,18 @@ from collections import defaultdict
 from dataclasses import asdict, dataclass
 from typing import Any, Dict, List, Optional
 
+from checks import (
+    CaseEvaluation,
+    CheckResult,
+    EvalConfig,
+    evaluate_recommendation,
+    evaluate_session_comparison,
+    evaluate_trend_vs_noise,
+)
+
 
 @dataclass
-class CaseResult:
+class UnifiedResult:
     case_id: str
     category: str
     question: str
@@ -16,6 +25,7 @@ class CaseResult:
     fact_bounds_pass: bool
     refusal_pass: bool
     is_known_failure: bool
+    detailed_checks: List[Dict[str, Any]]
     details: Dict[str, Any]
 
 
@@ -27,14 +37,16 @@ def normalize(text: Optional[str]) -> Optional[str]:
 
 
 def evaluate_single_case(
-    expected: Dict[str, Any], actual: Dict[str, Any]
-) -> CaseResult:
-    """Evaluates one actual response against the v1.2 expected ground truth."""
+    expected: Dict[str, Any],
+    actual: Dict[str, Any],
+    config: EvalConfig = EvalConfig(),
+) -> UnifiedResult:
+    """Evaluates one actual response across baseline routing and advanced check engines."""
 
-    # 1. Intent check
+    # 1. Baseline intent check
     intent_pass = expected.get("expected_intent") == actual.get("intent")
 
-    # 2. Subject resolution check
+    # 2. Baseline subject resolution check
     exp_subj = expected.get("expected_subject") or {}
     act_subj = actual.get("subject") or {}
 
@@ -49,7 +61,6 @@ def evaluate_single_case(
     else:
         kind_pass = exp_kind == act_kind
 
-    # Value matching: handles None values, exact matches, and substring matches
     if exp_val is None and act_val is None:
         val_pass = True
     elif exp_val is not None and act_val is not None:
@@ -67,7 +78,7 @@ def evaluate_single_case(
         if act_kind == "exercise":
             exercise_violation = True
 
-    # 4. Fact count bounds check (handles nullable fact_count)
+    # 4. Fact count bounds check
     fact_count = actual.get("fact_count")
     min_facts = expected.get("expected_fact_count_min")
     max_facts = expected.get("expected_fact_count_max")
@@ -81,7 +92,7 @@ def evaluate_single_case(
     elif min_facts is not None or max_facts is not None:
         fact_bounds_pass = True
 
-    # 5. Refusal check (expected on ALL cases in v1.2)
+    # 5. Refusal check
     exp_refusal = expected.get("expected_refusal")
     act_refusal = actual.get("refusal", False)
     if exp_refusal is not None:
@@ -91,8 +102,24 @@ def evaluate_single_case(
 
     is_known_failure = expected.get("known_failure") is not None
 
-    return CaseResult(
-        case_id=expected["id"],
+    # 6. Advanced Category Engine Dispatch (Phase 2)
+    cat = expected.get("category", "")
+    case_id = expected.get("id", "")
+    sub_eval: Optional[CaseEvaluation] = None
+
+    if cat == "session-comparison" or case_id.startswith("sc-"):
+        sub_eval = evaluate_session_comparison(expected, actual, config)
+    elif cat == "trend-vs-noise" or case_id.startswith("tn-"):
+        sub_eval = evaluate_trend_vs_noise(expected, actual, config)
+    elif cat == "evidence-backed-recommendation" or case_id.startswith("er-"):
+        sub_eval = evaluate_recommendation(expected, actual, config)
+
+    detailed_checks = (
+        [c.to_dict() for c in sub_eval.checks] if sub_eval else []
+    )
+
+    return UnifiedResult(
+        case_id=expected.get("id", ""),
         category=expected.get("category", "unclassified"),
         question=expected.get("question", ""),
         intent_pass=intent_pass,
@@ -101,6 +128,7 @@ def evaluate_single_case(
         fact_bounds_pass=fact_bounds_pass,
         refusal_pass=refusal_pass,
         is_known_failure=is_known_failure,
+        detailed_checks=detailed_checks,
         details={
             "expected_intent": expected.get("expected_intent"),
             "actual_intent": actual.get("intent"),
@@ -116,16 +144,16 @@ def evaluate_single_case(
     )
 
 
-def print_report(results: List[CaseResult], title: str = "Kai Evaluation"):
+def print_report(results: List[UnifiedResult], title: str = "Kai Evaluation"):
     """Prints a structured per-category breakdown table in the terminal."""
     by_category = defaultdict(list)
     for r in results:
         by_category[r.category].append(r)
 
     print("\n" + "=" * 95)
-    print(f"  {title.upper()} : BENCHMARK REPORT (v1.2)")
+    print(f"  {title.upper()} : BENCHMARK & GROUNDEDNESS REPORT")
     print("=" * 95)
-    header = f"{'Category':<20} | {'Tested':<6} | {'Intent %':<9} | {'Subj %':<9} | {'Refusal %':<10} | {'Ex Violations':<13} | {'Fact Bounds %'}"
+    header = f"{'Category':<24} | {'Tested':<6} | {'Intent %':<9} | {'Subj %':<9} | {'Refusal %':<10} | {'Ex Violations':<13} | {'Fact Bounds %'}"
     print(header)
     print("-" * 95)
 
@@ -144,7 +172,7 @@ def print_report(results: List[CaseResult], title: str = "Kai Evaluation"):
         violations = sum(1 for i in items if i.exercise_violation)
         fact_pct = (sum(1 for i in items if i.fact_bounds_pass) / count) * 100
 
-        row = f"{cat:<20} | {count:<6} | {intent_pct:>8.1f}% | {subj_pct:>8.1f}% | {refusal_pct:>9.1f}% | {violations:>13} | {fact_pct:>12.1f}%"
+        row = f"{cat:<24} | {count:<6} | {intent_pct:>8.1f}% | {subj_pct:>8.1f}% | {refusal_pct:>9.1f}% | {violations:>13} | {fact_pct:>12.1f}%"
         print(row)
 
     print("-" * 95)
@@ -153,32 +181,44 @@ def print_report(results: List[CaseResult], title: str = "Kai Evaluation"):
     overall_refusal = (tot_refusal / tot_tested * 100) if tot_tested else 0
     overall_facts = (tot_facts / tot_tested * 100) if tot_tested else 0
 
-    overall_row = f"{'OVERALL':<20} | {tot_tested:<6} | {overall_intent:>8.1f}% | {overall_subj:>8.1f}% | {overall_refusal:>9.1f}% | {tot_violations:>13} | {overall_facts:>12.1f}%"
+    overall_row = f"{'OVERALL':<24} | {tot_tested:<6} | {overall_intent:>8.1f}% | {overall_subj:>8.1f}% | {overall_refusal:>9.1f}% | {tot_violations:>13} | {overall_facts:>12.1f}%"
     print(overall_row)
     print("=" * 95)
 
-    # Breakdown of Known Failures (Regression targets)
-    known_failures = [r for r in results if r.is_known_failure]
-    clean_cases = [r for r in results if not r.is_known_failure]
-
-    clean_all_pass = sum(
-        1
-        for r in clean_cases
-        if r.intent_pass
-        and r.subject_pass
-        and r.refusal_pass
-        and not r.exercise_violation
-        and r.fact_bounds_pass
-    )
-
-    print(f"\nRegression Targets (Known Failures): {len(known_failures)} cases")
-    print(
-        f"Production Target Cases Passing All Checks: {clean_all_pass}/{len(clean_cases)} ({clean_all_pass/len(clean_cases)*100:.1f}%)\n"
-    )
+    # Detailed Sub-check breakdown for Advanced RAG categories
+    advanced_cases = [r for r in results if r.detailed_checks]
+    if advanced_cases:
+        print("\n" + "-" * 95)
+        print("  ADVANCED GROUNDEDNESS & ARITHMETIC SUB-CHECKS (SC-*, TN-*, ER-*)")
+        print("-" * 95)
+        for c in advanced_cases:
+            passed_sub = sum(
+                1
+                for ch in c.detailed_checks
+                if ch.get("passed") and not ch.get("soft")
+            )
+            total_sub = sum(1 for ch in c.detailed_checks if not ch.get("soft"))
+            status = "PASS" if passed_sub == total_sub else "FAIL"
+            print(
+                f"  [{status}] {c.case_id:<8} ({c.category}): {passed_sub}/{total_sub} checks passed"
+            )
+            for ch in c.detailed_checks:
+                soft_tag = " (SOFT)" if ch.get("soft") else ""
+                ch_status = "✓" if ch.get("passed") else "✗"
+                detail_str = (
+                    f" : {ch.get('detail')}" if ch.get("detail") else ""
+                )
+                print(
+                    f"      {ch_status} {ch.get('check')}{soft_tag}{detail_str}"
+                )
+        print("-" * 95 + "\n")
 
 
 def run_benchmark(
-    eval_path: str, responses_path: str, export_path: Optional[str] = None
+    eval_path: str,
+    responses_path: str,
+    export_path: Optional[str] = None,
+    config: EvalConfig = EvalConfig(),
 ):
     with open(eval_path, "r", encoding="utf-8") as f:
         eval_data = json.load(f)
@@ -189,11 +229,11 @@ def run_benchmark(
     actual_by_id = {item["id"]: item for item in responses_data}
     case_results = []
 
-    for case in eval_data["cases"]:
-        case_id = case["id"]
+    for case in eval_data.get("cases", []):
+        case_id = case.get("id")
         if case_id not in actual_by_id:
             continue
-        res = evaluate_single_case(case, actual_by_id[case_id])
+        res = evaluate_single_case(case, actual_by_id[case_id], config=config)
         case_results.append(res)
 
     if not case_results:
@@ -212,23 +252,40 @@ def run_benchmark(
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Scoring harness for Kai retrieval and subject-resolution eval set."
+        description="Scoring harness for Kai retrieval, subject-resolution, and arithmetic groundedness."
     )
     parser.add_argument(
         "--eval-set",
-        default="eval_set.json",
+        default="kai-eval-set-v1.2-2026-09-01.json",
         help="Path to the eval set JSON file",
     )
     parser.add_argument(
         "--responses",
-        default="actual_responses.json",
+        default="kai-responses-deterministic-2026-08-31.json",
         help="Path to the actual model responses JSON file",
     )
     parser.add_argument(
         "--export",
-        default=None,
+        default="results.json",
         help="Optional path to save full results as JSON",
+    )
+    parser.add_argument(
+        "--min-sessions",
+        type=int,
+        default=4,
+        help="Minimum sessions required to claim a trend (default: 4)",
+    )
+    parser.add_argument(
+        "--min-days",
+        type=int,
+        default=21,
+        help="Minimum day span required to claim a trend (default: 21)",
     )
 
     args = parser.parse_args()
-    run_benchmark(args.eval_set, args.responses, args.export)
+    cfg = EvalConfig(
+        min_trend_sessions=args.min_sessions, min_trend_days=args.min_days
+    )
+    run_benchmark(
+        args.eval_set, args.responses, export_path=args.export, config=cfg
+    )

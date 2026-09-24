@@ -158,7 +158,7 @@
     "exercise_violation": false,
     "fact_bounds_pass": true,
     "refusal_pass": true,
-    "is_known_failure": true,
+    "is_known_failure": false,
     "detailed_checks": [],
     "details": {
       "expected_intent": "general",
@@ -176,7 +176,7 @@
       "max_facts": null,
       "expected_refusal": false,
       "actual_refusal": false,
-      "known_failure": "arms is not captured as a body-part subject and resolves global"
+      "known_failure": null
     }
   },
   {
@@ -368,7 +368,7 @@
     "exercise_violation": false,
     "fact_bounds_pass": true,
     "refusal_pass": true,
-    "is_known_failure": true,
+    "is_known_failure": false,
     "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
@@ -386,7 +386,7 @@
       "max_facts": null,
       "expected_refusal": false,
       "actual_refusal": false,
-      "known_failure": "a length>=4 whole-word rule broke this; SEARCH_ALIASES must stay exempt"
+      "known_failure": null
     }
   },
   {
@@ -398,14 +398,14 @@
     "exercise_violation": false,
     "fact_bounds_pass": true,
     "refusal_pass": true,
-    "is_known_failure": true,
+    "is_known_failure": false,
     "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
       "actual_intent": "general",
       "expected_subject": {
         "kind": "exercise",
-        "value": "Overhead Press"
+        "value": "Press"
       },
       "actual_subject": {
         "kind": "global",
@@ -416,7 +416,7 @@
       "max_facts": null,
       "expected_refusal": false,
       "actual_refusal": false,
-      "known_failure": "same length-rule regression"
+      "known_failure": null
     }
   },
   {
@@ -1058,7 +1058,7 @@
     "exercise_violation": false,
     "fact_bounds_pass": true,
     "refusal_pass": true,
-    "is_known_failure": true,
+    "is_known_failure": false,
     "detailed_checks": [],
     "details": {
       "expected_intent": "exerciseProgress",
@@ -1076,7 +1076,7 @@
       "max_facts": null,
       "expected_refusal": false,
       "actual_refusal": false,
-      "known_failure": "an unlogged named lift resolves global instead of preserving the requested exercise"
+      "known_failure": null
     }
   },
   {
@@ -1088,7 +1088,7 @@
     "exercise_violation": false,
     "fact_bounds_pass": true,
     "refusal_pass": false,
-    "is_known_failure": true,
+    "is_known_failure": false,
     "detailed_checks": [],
     "details": {
       "expected_intent": "general",
@@ -1106,7 +1106,7 @@
       "max_facts": null,
       "expected_refusal": true,
       "actual_refusal": false,
-      "known_failure": "out-of-scope question is answered with a generic training fact pack instead of being refused"
+      "known_failure": null
     }
   },
   {
@@ -1118,7 +1118,7 @@
     "exercise_violation": false,
     "fact_bounds_pass": true,
     "refusal_pass": false,
-    "is_known_failure": true,
+    "is_known_failure": false,
     "detailed_checks": [],
     "details": {
       "expected_intent": "general",
@@ -1136,7 +1136,7 @@
       "max_facts": null,
       "expected_refusal": true,
       "actual_refusal": false,
-      "known_failure": "out-of-scope question is answered with a generic training fact pack instead of being refused"
+      "known_failure": null
     }
   }
 ]
